@@ -2,7 +2,7 @@
   "s3": {
     "stage": {
       "bucket": "projects-staging.seattletimes.com",
-      "path": ""
+      "path": "greedily-appreciate"
     },
     "live": {
       "bucket": "projects.seattletimes.com",
@@ -11,7 +11,7 @@
   },
   "title": "",
   "description": "",
-  "author": "",
+  "author": "Seattle Times staff",
   "url": "",
   "post_id": 0,
   "image": "assets/social.jpg",

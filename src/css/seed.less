@@ -27,32 +27,12 @@ h1 {
   }
 }
 
-/*-- Animation Keyframes for h1 glow --*/
-@keyframes neon {
-  from {
-    text-shadow:
-    0 0 10px rgba(105, 158, 78, 0.92),
-    0 0 20px rgba(96, 172, 98, 0.541),
-    0 0 12px rgba(21, 231, 74, 0.52),
-    0 0 21px #7dff7b,
-    0 0 50px rgba(38, 194, 24, 0.78),
-    0 0 65px rgba(7, 243, 38, 0.92);
-  }
-  to {
-    text-shadow:
-    0 0 6px rgba(120, 168, 97, 0.92),
-    0 0 30px rgba(45, 102, 48, 0.541),
-    0 0 40px rgba(21, 231, 74, 0.52),
-    0 0 21px #7dff7b,
-    0 0 50px rgba(43, 224, 27, 0.78),
-    0 0 60px rgba(58, 219, 80, 0.92);
-  }
-}
 
 /*-- Head content --*/
 header.top {
   padding: 0 10px;
-
+background: rgb(255,255,255);
+background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 94%, rgba(255,255,255,0) 100%);
   figure {
     margin: auto;
     max-width: 960px;
@@ -64,32 +44,10 @@ header.top {
       left: auto;
       z-index: 1;
     }
-    .main-illo-lights{
-      top: auto;
-      left: auto;
-      -webkit-animation: fade 1s alternate infinite;
-      animation: fade 1s alternate infinite;
-    }
+   
   }
 
-  /*-- Animation Keyframes for hero image glow --*/
-  @-webkit-keyframes fade {
-    10% {
-      opacity: 1;
-    }
-    100% {
-      opacity: .4;
-    }
-  }
-  
-  @keyframes fade {
-    10% {
-      opacity: 1;
-    }
-    100% {
-      opacity: .4;
-    }
-  }
+
 
   .illo-byline{
     color: #70757c;
@@ -201,8 +159,8 @@ header.top {
     background-color: white;
 
     .filter-icon{
-      width: 60px;
-      margin: 0 10px 0 10px;
+      width: 40px;
+      margin: 0 20px 0 10px;
       float: left;
     }
     .cat-label{
@@ -249,9 +207,9 @@ header.top {
   flex-flow: row wrap;
   font-size: 15px;
   font-family: @df-sans;
-  padding-left: 10px;
-  padding-right: 10px;
-
+  padding-left: 20px;
+  padding-right:20px;
+    padding-top: 30px;
   @supports (display: grid){
     display: -ms-grid;
     display: grid;
@@ -259,7 +217,7 @@ header.top {
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     }
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    grid-gap: 15px;
+    grid-gap: 25px;
     align-items: stretch;
   }
 }
@@ -300,13 +258,15 @@ header.top {
   }
   .event-icon {
     margin-top: 15px;
+      
     width: 20%;
     float: left;
   }
   .event-header{
       font-family: Nunito;
+      font-style: italic;
     font-size: 18px;
-    padding-left: 22%;
+    padding-left: 25%;
       
     a {
       font-size: 24px;
