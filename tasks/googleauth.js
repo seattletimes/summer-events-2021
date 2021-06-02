@@ -10,6 +10,7 @@ var fs = require("fs");
 
 var tokenLocation = path.join(os.homedir(), ".google_oauth_token");
 
+
 var authenticate = function() {
   var tokens = fs.readFileSync(path.join(os.homedir(), ".google_oauth_token"), "utf-8");
   tokens = JSON.parse(tokens);
@@ -23,6 +24,7 @@ var authenticate = function() {
 
   return auth;
 };
+
 
 var task = function(grunt) {
 

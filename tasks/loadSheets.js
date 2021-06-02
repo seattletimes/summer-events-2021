@@ -52,13 +52,12 @@ module.exports = function(grunt) {
     };
 
     var sheetKeys = project.sheets;
-
+   
     if (!sheetKeys || !sheetKeys.length) {
       return grunt.fail.fatal("You must specify a spreadsheet key in project.json or auth.json!");
     }
 
     var done = this.async();
-
     for (var spreadsheetId of sheetKeys) {
       var book = (await api.spreadsheets.get({ auth, spreadsheetId })).data;
       var { sheets, spreadsheetId } = book;
