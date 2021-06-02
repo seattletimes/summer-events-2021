@@ -108,8 +108,6 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 94
 .filters {
   background-color: white;
   font-family: Nunito;
-    
-    
   padding: 10px 0 20px 0;
 
   .nav-header {
@@ -183,6 +181,11 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 94
       cursor: pointer;
       margin: 2px;
       font-size: 16px;
+      
+      @media @mobile {
+         padding: 2px 4px;
+      }
+      
       .filter-icon{
         opacity: 40%;
       }
@@ -195,6 +198,10 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 94
       }
     }
   
+       @media @mobile {
+         width: 100%;
+      }
+      
   }
   li {
     display: inline-block;
@@ -210,6 +217,8 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 94
   padding-left: 20px;
   padding-right:20px;
     padding-top: 30px;
+    padding-bottom: 20px;
+    
   @supports (display: grid){
     display: -ms-grid;
     display: grid;

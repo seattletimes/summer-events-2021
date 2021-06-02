@@ -34,7 +34,7 @@
          
         </div>
       </header>
-         
+         <zeus-ad id='zeus_top' width="100%;"></zeus-ad>
       <main > 
         <nav class="filters">
           <h2 class="nav-header">Choose categories</h2>    
@@ -97,8 +97,10 @@
           </div>
         </div>
           <div class="no-results">Start a new search or select a category</div>
+                          <zeus-ad id='zeus_bottom' width="100%;"></zeus-ad>
     </responsive-child>
-
+<script src="https://seattle-times.zeustechnology.com/main.js" async></script>
+<script src="https://www.seattletimes.com/wp-content/plugins/st-advertising/dist/st-projects-bundle.js" async></script>
     <script src="app.js" async></script>
     <% if (json.project.production) { %>
     <%= !json.project.embedded ? t.include("partials/_analytics.html") : "" %>
