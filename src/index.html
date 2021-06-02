@@ -17,8 +17,12 @@
       <%= t.include("partials/_gtmNoScript.html") %>
     <% } %>
     <responsive-child>
+        
       <%= t.include("partials/_nav.html") %>  
       <header class="top">
+          <div>
+         <zeus-ad id='zeus_top' width="100%;"></zeus-ad>
+            </div>
         <h1>Summer Guide 2021</h1>
         <figure>
           <img class="main-illo-lines" src="./assets/main-illo.png" alt="">
@@ -34,10 +38,11 @@
          
         </div>
       </header>
-         <zeus-ad id='zeus_top' width="100%;"></zeus-ad>
+        
       <main > 
+          <h2 class="nav-header">Choose categories</h2>  
         <nav class="filters">
-          <h2 class="nav-header">Choose categories</h2>    
+            
           <% var cats = [
             { data: "aquatic-activities", label: "Aquatic Activities" },
              { data: "art-exhibits-expos", label: "Art, Exhibits and Expos" },
@@ -64,11 +69,12 @@
               </li>
             <% }) %>
           </ul>
-          <div class="advanced">
+          
+         </nav>
+              <div class="advanced">
             <input type="text" placeholder="Search events" class="search" id="search">
             <button class="clear-search" type="reset"><img src="assets/x-icon.svg"></button>
           </div>
-         </nav>
          <!-- End filters -->   
            
           <div class="event-grid">
@@ -97,7 +103,9 @@
           </div>
         </div>
           <div class="no-results">Start a new search or select a category</div>
+                          <div>
                           <zeus-ad id='zeus_bottom' width="100%;"></zeus-ad>
+                              </div>
     </responsive-child>
 <script src="https://seattle-times.zeustechnology.com/main.js" async></script>
 <script src="https://www.seattletimes.com/wp-content/plugins/st-advertising/dist/st-projects-bundle.js" async></script>

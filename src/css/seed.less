@@ -79,7 +79,7 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 94
 
 /*-- Filter Menu --*/
 .sticky{
-  position: fixed;
+  position: sticky;
   z-index: 1; //for ie11
   top: 0;
   border-bottom: 1px solid #ccc;
@@ -92,6 +92,8 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 94
     display: none !important;
   }
   @media @mobile{
+      position: sticky;
+      
     .filter-icon{
       display: none;
     }
@@ -105,12 +107,9 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 94
   padding-top: 102px;
 }
 
-.filters {
-  background-color: white;
-  font-family: Nunito;
-  padding: 10px 0 20px 0;
-
-  .nav-header {
+.nav-header {
+    font-family: Nunito;
+    background-color: white;
     color: #568727;
     font-size: 20px;
     font-weight: 900;
@@ -118,6 +117,15 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 94
       text-transform: uppercase;
     margin: 0;
   }
+
+.filters {
+    position: sticky;
+    top: 0;
+  background-color: white;
+  font-family: Nunito;
+  padding: 10px 0 20px 0;
+
+  
 
    .search {
      width:100%;
@@ -149,17 +157,22 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 94
   }
 
   .categories {
-    padding: 8px 0;
+    position: sticky;
+      padding: 8px 0;
     margin: 0;
     list-style-type: none;
     display: block;
     text-align: center;
     background-color: white;
-
+      
     .filter-icon{
       width: 40px;
       margin: 0 20px 0 10px;
       float: left;
+        
+        @media @mobile {
+            display:none;
+        }
     }
     .cat-label{
         font-family: Nunito;
@@ -219,11 +232,16 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 94
     padding-top: 30px;
     padding-bottom: 20px;
     
+    @media @mobile {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
   @supports (display: grid){
     display: -ms-grid;
     display: grid;
     @media @mobile {
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
     }
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     grid-gap: 25px;
@@ -259,7 +277,7 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 94
     border-radius: 30px;
   }
   border-radius: 20px;
-  padding: 0px 20px 0px 30px;
+  padding: 0px 20px 0px 20px;
 
   .details{
     clear: both;
@@ -278,7 +296,7 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 94
     padding-left: 25%;
       
     a {
-      font-size: 24px;
+      font-size: 22px;
         font-weight: 800;
         line-height: 100%;
       color: #568727;

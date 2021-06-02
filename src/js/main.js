@@ -84,6 +84,7 @@ function noResults(){
   }
 }
 
+/*
 function fixNav(){
   if(window.pageYOffset > sticky) {
     header.classList.add("sticky");
@@ -92,7 +93,7 @@ function fixNav(){
     header.classList.remove("sticky");
   }
 }
-
+*/
 function clearSearchBox(){
   searchBox.value = "";
   clearSearch.style.display="none";
