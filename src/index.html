@@ -17,8 +17,8 @@
       <%= t.include("partials/_gtmNoScript.html") %>
     <% } %>
     <responsive-child>
-        
-      <%= t.include("partials/_nav.html") %>  
+
+      <%= t.include("partials/_nav.html") %>
       <header class="top">
           <div>
          <zeus-ad id='zeus_top' width="100%;"></zeus-ad>
@@ -35,21 +35,20 @@
             <p class="pub-date"></p>Published June 6, 2021</p>
           </div>
           <p>The holiday season is here — and with it, an abundance of events and activities are coming to the Seattle area. Whether you want to shop for gifts at a holiday market, take the kids to see Santa or hum along to cheery holiday music, there’s no shortage of ways to have festive fun in the coming weeks. Use this guide to help decide where to go and what to do before, after or on the holidays. In case of cancellations or schedule changes, always check times and dates before you go.</p>
-         
+
         </div>
       </header>
-        
-      <main > 
-          <h2 class="nav-header">Choose categories</h2>  
+
+      <main >
+          <h2 class="nav-header">Choose categories</h2>
         <nav class="filters">
-            
           <% var cats = [
             { data: "aquatic-activities", label: "Aquatic Activities" },
              { data: "art-exhibits-expos", label: "Art, Exhibits and Expos" },
             { data: "exercise", label: "Exercise"},
             { data: "festivals-and-parades", label: "Festivals and Parades" },
             { data: "food-and-drink", label: "Food and Drink" },
-            { data: "fourth-of-july", label: "Fourth of July" }, 
+            { data: "fourth-of-july", label: "Fourth of July" },
              { data: "markets", label: "Markets" },
              { data: "other", label: "Other" }
           ] %>
@@ -69,14 +68,14 @@
               </li>
             <% }) %>
           </ul>
-          
+
          </nav>
-              <div class="advanced">
+          <div class="advanced">
             <input type="text" placeholder="Search events" class="search" id="search">
             <button class="clear-search" type="reset"><img src="assets/x-icon.svg"></button>
           </div>
-         <!-- End filters -->   
-           
+         <!-- End filters -->
+
           <div class="event-grid">
           <div class="grid-container">
             <% var cat = {"Aquatic Activities": "aquatic-activities", "Art, Exhibits and Expos": "art-exhibits-expos", Exercise: "exercise", "Exhibits and Expos": "exhibits-and-expos", "Festivals and Parades": "festivals-and-parades", "Food and Drink": "food-and-drink", "Fourth of July": "fourth-of-july", "Markets": "markets", "Other": "other" } %>
@@ -89,12 +88,12 @@
                       <%= event.dates %>, <%= event.time %>
                     </p>
                   </div>
-                  
+
                   <div class="event-info">
                     <p class="details"><%= event.info %> </p>
                     <p class="event-price"><%= event.price.charAt(0).toUpperCase() + event.price.slice(1) %> </p>
                   </div>
-               
+
                   <div >
                     <p class="phone-address"><%= event.eventtype %><br><%= event.location %><br><%= event.phone %></p>
                   </div>
