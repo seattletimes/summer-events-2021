@@ -6,7 +6,7 @@
     },
     "live": {
       "bucket": "projects.seattletimes.com",
-      "path": ""
+      "path": "2021/seattle-summer-events-guide-art-exhibits-festivals-exercise-holiday-water-markets-parades"
     }
   },
   "title": "",
@@ -17,6 +17,6 @@
   "image": "assets/social.jpg",
   "sheets": ["1OHYUznz5CT6Dzy6tJfbsTxel8OByQUzGCdDdscd7UdQ"],
   "docs": [],
-  "embedded": true,
+  "embedded": false,
   "production": false
 }
