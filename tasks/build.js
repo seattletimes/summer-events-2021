@@ -45,6 +45,14 @@ module.exports = function(grunt) {
 
   grunt.registerTask("build", "Processes index.html using shared data (if available)", function() {
     var files = grunt.file.expandMapping(["**/*.html", "!**/_*.html", "!js/**/*.html"], "build", { cwd: "src" });
+      
+      files.push({
+    src: [ "src/guide.xml" ],
+    dest: "build/guide.xml"
+  });
+
+
+
     var data = Object.create(grunt.data || {});
     data.t = grunt.template;
     files.forEach(function(file) {
