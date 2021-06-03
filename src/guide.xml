@@ -21,7 +21,7 @@
 <%
 var stories = {};
 
-json.Sheet1.forEach(function(row) {
+csv.guide.forEach(function(row) {
   var date = row.startdate.trim();
   
   var genre = row.category.trim();

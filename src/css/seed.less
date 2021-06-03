@@ -124,6 +124,7 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 94
   background-color: white;
   font-family: Nunito;
   padding: 10px 0 10px 0;
+    box-shadow: 0px 3px 5px lightgray;
 
 
 
@@ -138,7 +139,8 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 94
 
     .filter-icon{
       width: 40px;
-      margin: 0 20px 0 10px;
+      margin: 0 20px 0 5px;
+       
       float: left;
 
         @media @mobile {
@@ -150,6 +152,10 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 94
       display: inline-block;
       line-height: 20px;
       height: 20px;
+        padding-top: 10px;
+        @media @mobile {
+            padding-top: 0px;
+        }
     }
     label {
       display: block;
@@ -163,7 +169,7 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 94
       color: @df-middle-gray;
       border-radius: 10px;
       cursor: pointer;
-      margin: 2px;
+      margin: 6px 2px 2px 2px;
       font-size: 16px;
 
       @media @mobile {
@@ -193,23 +199,40 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 94
 
 }     
 
+.all-events-icon {
+    width: 60px;
+    margin: 0 20px 0 5px;
+    float: left;
+
+        @media @mobile {
+            display:none;
+        }
+}
+
 .search-container {
+    
     background-color: white;
-    padding-bottom: 10px;
+    padding-top: 10px;
+     z-index: 100;
 }
 
 .advanced {
+    
     background-color: white;
   font-family: Nunito;
-  padding: 10px 0 20px 0;
+ 
     margin: auto;
     border-radius: 10px;
-    border: 1px solid @df-middle-gray;
+    border: 1px solid @df-light-gray;
     padding: 8px 12px;
     background-color: #f3f3f3;
     width: 300px;
+   height: 57px;
     @media @mobile{
       width: 90%;
+      padding: 2px 4px;
+        height: auto;
+       
     }
     .display-flex;
     .justify-content(center);
@@ -220,17 +243,19 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 94
       background-color: transparent;
       display: none;
     }
-     
-     
+      
   }
 
 
 .search {
      width: 100%;
      border: none;
-     line-height: 20px;
-     font-size: 18px;
+     line-height: 18px;
+    color: lightgray;
      background-color: #f3f3f3;
+    font-family: Nunito;
+    font-size: 16px;
+    
    }
 
  
@@ -354,3 +379,5 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 94
 .dont-miss{
   margin-bottom: 30px;
 }
+
+
