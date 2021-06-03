@@ -5,7 +5,7 @@ require("component-responsive-frame/child");
 
 
 var catList = document.querySelectorAll(".filter-buttons");
-var searchBox = document.querySelector(".filters .search");
+var searchBox = document.querySelector(".advanced .search");
 var header = document.querySelector(".filters");
 var sticky = header.offsetTop;
 var clearSearch = document.querySelector(".clear-search");
@@ -16,7 +16,7 @@ var events = document.querySelectorAll(".event");
 var resultBox = document.querySelector(".no-results");
 
 var show = ['festivals', 'lights', 'markets', 'parties', 'runs', 'special-events'];
-var result; 
+var result;
 
 function filterByCategory(cat){
   if(show.length == 6){
@@ -66,33 +66,34 @@ function combineFilters(){
       }
       noResults();
     }
-  } 
+  }
   else{
     for(var i = 0; i<events.length; i++){
       events[i].style.display="none";
-    } 
+    }
     noResults();
-  }   
+  }
 }
 
 function noResults(){
   if (result==0){
-    resultBox.style.display="block";  
+    resultBox.style.display="block";
   }
   else{
-    resultBox.style.display="none"; 
+    resultBox.style.display="none";
   }
 }
 
+/*
 function fixNav(){
   if(window.pageYOffset > sticky) {
     header.classList.add("sticky");
-    } 
+    }
   else{
     header.classList.remove("sticky");
   }
 }
-
+*/
 function clearSearchBox(){
   searchBox.value = "";
   clearSearch.style.display="none";
@@ -107,14 +108,14 @@ function allEvents(){
   }
   else{
     this.classList.remove("checked");
-  }  
+  }
 
   for(var x = 0; x < catList.length; x++){
     catList[x].classList.remove("checked");
   }
   for(var i = 0; i<events.length; i++){
     events[i].style.display="inline";
-  }  
+  }
 }
 
 function detectIE() {
@@ -151,4 +152,3 @@ allEventsButton.addEventListener("click", allEvents);
 searchBox.addEventListener("keyup", searchListener);
 window.onscroll = function() {fixNav()};
 detectIE();
-

@@ -1,5 +1,7 @@
 @import "seattletimes";
 
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+
 body {
   width: 100%;
   font-size: 19px;
@@ -14,41 +16,23 @@ h1 {
   text-align: center;
   margin-bottom: 0px;
   padding-bottom: 40px;
-  font-family: 'Yeseva One', cursive;
-  color: #12562a;
-  animation: neon 1s ease-in-out infinite alternate;
-  letter-spacing: 2px;
+  font-family: 'Nunito', sans-serif;
+    font-weight: 900;
+    font-style: italic;
+  color: #8EB455;
+
+    text-shadow: 4px 4px #2D3A77;
   @media @mobile {
     font-size: 35px;
   }
 }
 
-/*-- Animation Keyframes for h1 glow --*/
-@keyframes neon {
-  from {
-    text-shadow:
-    0 0 10px rgba(105, 158, 78, 0.92),
-    0 0 20px rgba(96, 172, 98, 0.541),
-    0 0 12px rgba(21, 231, 74, 0.52),
-    0 0 21px #7dff7b,
-    0 0 50px rgba(38, 194, 24, 0.78),
-    0 0 65px rgba(7, 243, 38, 0.92);
-  }
-  to {
-    text-shadow:
-    0 0 6px rgba(120, 168, 97, 0.92),
-    0 0 30px rgba(45, 102, 48, 0.541),
-    0 0 40px rgba(21, 231, 74, 0.52),
-    0 0 21px #7dff7b,
-    0 0 50px rgba(43, 224, 27, 0.78),
-    0 0 60px rgba(58, 219, 80, 0.92);
-  }
-}
 
 /*-- Head content --*/
 header.top {
   padding: 0 10px;
-
+background: rgb(255,255,255);
+background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 94%, rgba(255,255,255,0) 100%);
   figure {
     margin: auto;
     max-width: 960px;
@@ -60,32 +44,10 @@ header.top {
       left: auto;
       z-index: 1;
     }
-    .main-illo-lights{
-      top: auto;
-      left: auto;
-      -webkit-animation: fade 1s alternate infinite;
-      animation: fade 1s alternate infinite;
-    }
+
   }
 
-  /*-- Animation Keyframes for hero image glow --*/
-  @-webkit-keyframes fade {
-    10% {
-      opacity: 1;
-    }
-    100% {
-      opacity: .4;
-    }
-  }
-  
-  @keyframes fade {
-    10% {
-      opacity: 1;
-    }
-    100% {
-      opacity: .4;
-    }
-  }
+
 
   .illo-byline{
     color: #70757c;
@@ -117,7 +79,7 @@ header.top {
 
 /*-- Filter Menu --*/
 .sticky{
-  position: fixed;
+  position: sticky;
   z-index: 1; //for ie11
   top: 0;
   border-bottom: 1px solid #ccc;
@@ -130,6 +92,8 @@ header.top {
     display: none !important;
   }
   @media @mobile{
+      position: sticky;
+
     .filter-icon{
       display: none;
     }
@@ -143,34 +107,107 @@ header.top {
   padding-top: 102px;
 }
 
-.filters {
-  background-color: white;
-  font-family: @df-sans;
-  padding: 10px 0 20px 0;
-
-  .nav-header {
-    color: #12562a;
+.nav-header {
+    font-family: Nunito;
+    background-color: white;
+    color: #568727;
     font-size: 20px;
-    font-weight: bold;
+    font-weight: 900;
     text-align: center;
+      text-transform: uppercase;
     margin: 0;
   }
 
-   .search {
-     width:100%;
-     border: none;
-     line-height: 30px;
-     font-size: 18px;
-     background-color: #f3f3f3;
-   }
+.filters {
+    position: sticky;
+    top: 0;
+  background-color: white;
+  font-family: Nunito;
+  padding: 10px 0 10px 0;
 
-  .advanced {
+
+
+  .categories {
+    position: sticky;
+      padding: 8px 0;
+    margin: 0;
+    list-style-type: none;
+    display: block;
+    text-align: center;
+    background-color: white;
+
+    .filter-icon{
+      width: 40px;
+      margin: 0 20px 0 10px;
+      float: left;
+
+        @media @mobile {
+            display:none;
+        }
+    }
+    .cat-label{
+        font-family: Nunito;
+      display: inline-block;
+      line-height: 20px;
+      height: 20px;
+    }
+    label {
+      display: block;
+    }
+
+
+  button {
+    background-color: white;
+      padding: 8px 8px;
+      border: 1px solid @df-light-gray;
+      color: @df-middle-gray;
+      border-radius: 10px;
+      cursor: pointer;
+      margin: 2px;
+      font-size: 16px;
+
+      @media @mobile {
+         padding: 2px 4px;
+      }
+
+      .filter-icon{
+        opacity: 40%;
+      }
+    }
+    .checked {
+      border: 1px solid @df-dark-gray;
+      color: @df-dark-gray;
+      .filter-icon{
+        opacity: 100%;
+      }
+    }
+
+       @media @mobile {
+         width: 100%;
+      }
+
+  }
+  li {
+    display: inline-block;
+  }
+
+}     
+
+.search-container {
+    background-color: white;
+    padding-bottom: 10px;
+}
+
+.advanced {
+    background-color: white;
+  font-family: Nunito;
+  padding: 10px 0 20px 0;
     margin: auto;
     border-radius: 10px;
     border: 1px solid @df-middle-gray;
     padding: 8px 12px;
     background-color: #f3f3f3;
-    width: 400px;
+    width: 300px;
     @media @mobile{
       width: 90%;
     }
@@ -183,57 +220,23 @@ header.top {
       background-color: transparent;
       display: none;
     }
+     
+     
   }
 
-  .categories {
-    padding: 8px 0;
-    margin: 0;
-    list-style-type: none;
-    display: block;
-    text-align: center;
-    background-color: white;
 
-    .filter-icon{
-      width: 60px;
-      margin: 0 10px 0 10px;
-      float: left;
-    }
-    .cat-label{
-      display: inline-block;
-      line-height: 48px;
-      height: 48px;
-    }
-    label {
-      display: block;
-    }
-  
+.search {
+     width: 100%;
+     border: none;
+     line-height: 20px;
+     font-size: 18px;
+     background-color: #f3f3f3;
+   }
 
-  button {
-    background-color: white;
-      padding: 2px 8px;
-      border: 1px solid @df-light-gray;
-      color: @df-middle-gray;
-      border-radius: 10px;
-      cursor: pointer;
-      margin: 2px;
-      font-size: 18px;
-      .filter-icon{
-        opacity: 40%;
-      }
-    }
-    .checked {
-      border: 1px solid @df-dark-gray;
-      color: @df-dark-gray;
-      .filter-icon{
-        opacity: 100%;
-      }
-    }
-  
-  }
-  li {
-    display: inline-block;
-  }
-}             
+ 
+
+
+
 
 
 .grid-container{
@@ -241,17 +244,24 @@ header.top {
   flex-flow: row wrap;
   font-size: 15px;
   font-family: @df-sans;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 20px;
+  padding-right:20px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+
+    @media @mobile {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 
   @supports (display: grid){
     display: -ms-grid;
     display: grid;
     @media @mobile {
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
     }
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    grid-gap: 15px;
+    grid-gap: 25px;
     align-items: stretch;
   }
 }
@@ -267,21 +277,24 @@ header.top {
     position: relative;
     padding: 10px;
     box-sizing: border-box;
+
   }
 }
 
 .event-grid{
-  background-color: #eddb85 ;
+  background-color: #C4E6EF;
   padding: 10px 0;
 }
 
 .event {
   background-color: white;
+    border: 2px solid #88BECF;
+  box-shadow: 6px 6px 0px #88BECF;
   @media @mobile{
-    border-radius: 10px;
+    border-radius: 30px;
   }
-  border-radius: 10px;
-  padding: 0px 20px 0px 30px;
+  border-radius: 20px;
+  padding: 0px 20px 0px 20px;
 
   .details{
     clear: both;
@@ -289,22 +302,29 @@ header.top {
   }
   .event-icon {
     margin-top: 15px;
+
     width: 20%;
     float: left;
   }
   .event-header{
+      font-family: Nunito;
+      font-style: italic;
     font-size: 18px;
-    padding-left: 22%;
+    padding-left: 25%;
+
     a {
-      font-size: 20px;
-      color: #12562a;
+      font-size: 22px;
+        font-weight: 800;
+        line-height: 100%;
+      color: #568727;
       text-decoration: none;
-      font-weight: bold;
-    } 
+    }
+
     p{
       margin-bottom: 5px;
-    } 
+    }
   }
+
   .event-price{
     margin: 4px 0 4px 0;
   }

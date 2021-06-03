@@ -2,21 +2,21 @@
   "s3": {
     "stage": {
       "bucket": "projects-staging.seattletimes.com",
-      "path": ""
+      "path": "greedily-appreciate"
     },
     "live": {
       "bucket": "projects.seattletimes.com",
-      "path": ""
+      "path": "2021/seattle-summer-events-guide-art-exhibits-festivals-exercise-holiday-water-markets-parades"
     }
   },
   "title": "",
   "description": "",
-  "author": "",
+  "author": "Seattle Times staff",
   "url": "",
   "post_id": 0,
   "image": "assets/social.jpg",
   "sheets": ["1OHYUznz5CT6Dzy6tJfbsTxel8OByQUzGCdDdscd7UdQ"],
   "docs": [],
-  "embedded": true,
+  "embedded": false,
   "production": false
 }
