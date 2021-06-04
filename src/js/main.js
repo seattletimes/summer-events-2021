@@ -5,7 +5,7 @@ require("component-responsive-frame/child");
 
 
 var catList = document.querySelectorAll(".filter-buttons");
-var searchBox = document.querySelector(".advanced .search");
+var searchBox = document.querySelector(".advanced #search");
 var header = document.querySelector(".filters");
 var sticky = header.offsetTop;
 var clearSearch = document.querySelector(".clear-search");
@@ -15,11 +15,12 @@ var eventGrid = document.querySelector(".event-grid");
 var events = document.querySelectorAll(".event");
 var resultBox = document.querySelector(".no-results");
 
-var show = ['festivals', 'lights', 'markets', 'parties', 'runs', 'special-events'];
+var show = ['aquatic-activities', 'art-exhibits-expos', 'exercise', 'exhibits-and-expos', 'festivals-and-parades', "food-and-drink", "fourth-of-july", "markets", 'other'];
+
 var result;
 
 function filterByCategory(cat){
-  if(show.length == 6){
+  if(show.length == 9){
     show = [];
   }
   if (show.indexOf(cat) > -1){
@@ -54,7 +55,7 @@ function combineFilters(){
       noResults();
     }
     else if(searchText.length > 0){
-      for( var a = 0; a<events.length; a++){
+      for( var a = 0; a < events.length; a++){
         var eventText = events[a].innerText.toLowerCase();
         if ((eventText.search(searchText) > -1) && (show.indexOf(events[a].dataset.category) > -1)){
           events[a].style.display="inline";
@@ -68,7 +69,7 @@ function combineFilters(){
     }
   }
   else{
-    for(var i = 0; i<events.length; i++){
+    for(var i = 0; i < events.length; i++){
       events[i].style.display="none";
     }
     noResults();
@@ -102,7 +103,7 @@ function clearSearchBox(){
 
 function allEvents(){
   clearSearchBox();
-  show = ['festivals', 'lights', 'markets', 'parties', 'runs', 'special-events'];
+  show = ['aquatic-activities', 'art-exhibits-expos', 'exercise', 'exhibits-and-expos', 'festivals-and-parades', "food-and-drink", "fourth-of-july", "markets", 'other'];
   if (this.classList.length == 1){
     this.classList.add("checked");
   }
@@ -150,5 +151,5 @@ function searchListener(){
 clearSearch.addEventListener("click", clearSearchBox);
 allEventsButton.addEventListener("click", allEvents);
 searchBox.addEventListener("keyup", searchListener);
-window.onscroll = function() {fixNav()};
+// window.onscroll = function() {fixNav()};
 detectIE();
