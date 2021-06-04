@@ -111,13 +111,17 @@
         Illustrations by Jennifer Luxton
         <div>Design and Development by Stephanie Hays</div>
         <div>Research by Yasmeen Wafai and Vonnai Phair</div>
-        <div>Project editing by Trevor Lenzmeier, Stefanie Loh and Emily Eng</div>
+        <div>Project editing by Trevor Lenzmeier, Stefanie Loh, Janet Tu and Emily Eng</div>
       </div>
                           
-                          
+            
                           <div>
                           <zeus-ad id='zeus_bottom' width="100%;"></zeus-ad>
                               </div>
+                          
+                          <div class="comments">
+            <%= t.include("partials/_comments.html") %>
+                </div>
                           
         
                           
@@ -131,7 +135,7 @@
     <% if (json.project.production) { %>
     <%= !json.project.embedded ? t.include("partials/_analytics.html") : "" %>
     <%= t.include("partials/_workHere.html") %>
-        <%= t.include("partials/_comments.html") %>
+        
     <% } %>
   </body>
 </html>
