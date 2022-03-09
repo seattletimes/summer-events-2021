@@ -34,14 +34,14 @@
             <p class="byline">By Seattle Times staff</p>
             <p class="pub-date"></p>Published June 6, 2021</p>
           </div>
-          <p>Planning out your summer? Use this interactive guide to find activities around Seattle in summer 2021. For more summer fun, check out the rest of our <a href="st.news/summer2021" target="_blank">summer guide package.</a></p>
+          <p>Planning out your summer? Use this interactive guide to find activities around Seattle in summer 2021. For more summer fun, check out the rest of our <a href="https://www.seattletimes.com/life/your-guide-to-all-things-summer-in-seattle-2021/" target="_blank" rel="nofollow noreferrer nopener">summer guide package.</a></p>
 
         </div>
       </header>
 
       <main >
           <h2 class="nav-header">Choose categories</h2>
-          
+
         <nav class="filters">
           <% var cats = [
             { data: "aquatic-activities", label: "Aquatic Activities" },
@@ -68,7 +68,7 @@
                 </button>
               </li>
             <% }) %>
-                
+
                 <li class="search-container">
           <div class="advanced" >
             <input type="text" placeholder="Search events" class="search" id="search">
@@ -78,7 +78,7 @@
           </ul>
 
          </nav>
-              
+
          <!-- End filters -->
 
           <div class="event-grid">
@@ -116,26 +116,26 @@
                           <div class="comments">
             <%= t.include("partials/_comments.html") %>
                 </div>
-            
+
                           <div>
                           <zeus-ad id='zeus_bottom' width="100%;"></zeus-ad>
                               </div>
-                          
-                          
-                          
-        
-                          
+
+
+
+
+
     </responsive-child>
-                        
-                        
-                        
+
+
+
 <script src="https://seattle-times.zeustechnology.com/main.js" async></script>
 <script src="https://www.seattletimes.com/wp-content/plugins/st-advertising/dist/st-projects-bundle.js" async></script>
     <script src="app.js" async></script>
     <% if (json.project.production) { %>
     <%= !json.project.embedded ? t.include("partials/_analytics.html") : "" %>
     <%= t.include("partials/_workHere.html") %>
-        
+
     <% } %>
   </body>
 </html>
